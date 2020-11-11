@@ -3,24 +3,23 @@ variable "aws_region" {
     default = "ca-central-1"
 }
 
+variable "aws_profile" {
+    description = "AWS credentials profile"
+}
+
 variable "aws_amis" {
     type = map(string)
-    default = {
-        # Ubuntu Offical AMIs      
-        ca-central-1 = "ami-0e625dfca3e5a33bd"
-        us-west-2 = "ami-089f171a1ba090f7c"
-        us-east-1 = "ami-074db80f0dc9b5f40"
-    }
+    description = "AWS AMIs"
 }
 
 variable "aws_vpc_identifier" {
-    default = "vpc-af3b1fc7"
+    description = "AWS VPC ID"
 }
 
 variable "aws_subnet_1" {
-    default = "subnet-95b2f8fd"
+    description = "AWS subnet ID for load balancer: 1"
 }
 
 variable "aws_subnet_2" {
-    default = "subnet-c01076ba"
+    description = "AWS subnet ID for load balancer: 2"
 }
