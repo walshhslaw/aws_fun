@@ -23,18 +23,23 @@ _Replacement is optional_
 
 ## Assumptions:
 
-Access to AWS is set up and user has full access to EC2, S3
-Terraform state stored in S3 bucket, bucket name key and bucket region are hardcoded and need to be replaced before running.<br/>
+Access to AWS is set up and user has full access to EC2, S3<br/>
+Terraform state stored in S3 bucket, bucket name key and bucket region are hardcoded and need to be replaced before running. S3 bucket should be accessible by the user defined in the AWS credentials profile<br/>
 VPC and subnets set up in advance and are not created by Terraform
 
 ## Run:
-### Preview
+### Setup
 Update default variables in [terraform.tfvars](./terraform.tfvars) and S3 bucket config in [main.tf](./main.tf) before running:<br/>
+`terraform init`
+<br/>See [Variables](#Variables) section for required/optional replacement.
+
+### Preview
+Confirm default variables updated in [terraform.tfvars](./terraform.tfvars) and S3 bucket config in [main.tf](./main.tf) before running:<br/>
 `terraform plan`
 <br/>See [Variables](#Variables) section for required/optional replacement.
 
 ### Run
-Update default variables in [terraform.tfvars](./terraform.tfvars) and S3 bucket config in [main.tf](./main.tf) before running:<br/>
+Confirm default variables updated in [terraform.tfvars](./terraform.tfvars) and S3 bucket config in [main.tf](./main.tf) before running:<br/>
 `terraform apply`
 <br/>Add `-auto-approve` to remove the interactive approval requirement
 <br/>See [Variables](#Variables) section for required/optional replacement.
