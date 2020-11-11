@@ -29,6 +29,7 @@ VPC and subnets set up in advance and are not created by Terraform
 
 ## Run:
 ### Setup
+Run command once, after repo cloning, to initialise Terraform<br/>
 Update default variables in [terraform.tfvars](./terraform.tfvars) and S3 bucket config in [main.tf](./main.tf) before running:<br/>
 `terraform init`
 <br/>See [Variables](#Variables) section for required/optional replacement.
