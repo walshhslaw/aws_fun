@@ -1,5 +1,10 @@
 terraform {
     required_version = ">=0.12"
+    backend "s3" {
+        bucket = "walshhslaw-terraform-store"
+        key = "terraform-fun"
+        region = "ca-central-1"
+    }
 }
 
 provider "aws" {
